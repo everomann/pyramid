@@ -123,7 +123,7 @@ Se estiver utilizando Pycharm Community
       ```
       O projeto sera executado por padrão na porta 6543, definida no arquivo development.ini junto com o servidor Waitress utilizado.
 
-##Considerações Finais
+## Considerações Finais
 - A comunidade é pouco engajada, com poucas atualizações relevantes nos últimos anos.
 - Embora a documentação seja boa, ainda é difícil encontrar materiais específicos quando necessário. Existem poucos tutoriais produzidos pela comunidade para resolver questões mais avançadas.
 - Para projetos com necessidades semelhantes, Django e Flask se destacam como opções mais robustas, com melhor suporte e uma comunidade mais ativa.
