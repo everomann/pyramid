@@ -76,14 +76,18 @@ Se estiver utilizando Pycharm Community
       ```
 
   6. Serão exibidas no terminal algumas opções que precisam ser preenchidas:
-     - project_name: insira o nome do projeto de de enter
-     - repo_name: insira o nome do repositrio do projeto e de enter
-     - Select template_language: digite 1 para selecionar o Jinja2 e de enter
-     - Select backend: digite 2 para selecionar o SqlAchemy e de enter
-  Como resultado disto será criada uma pasta com o nome inserido em project_name contendo o projeto criado.
+     - project_name: insira o nome do projeto 
+     - repo_name: insira o nome do repositrio do projeto
+     - Select template_language: digite 1 para selecionar o Jinja2
+     - Select backend: digite 2 para selecionar o SqlAchemy
+  O resultado disto será  uma pasta criada com o nome inserido em project_name contendo o projeto criado.
  
-  7. Com o projeto criado, mas ainda são necessárias alguns passos. Navegue pelo terminal até a pasta do seu projeto usando ```cd nomde_do_projeto```
-  
+  7. Com o projeto criado, mas ainda são necessárias alguns passos. Navegue pelo terminal até a pasta do seu projeto usando
+     ```
+        
+      cd nomde_do_projeto
+      
+      ```
   8. Instalar as dependencias definidas no arquivo setup.py:
       ```
         
@@ -108,7 +112,7 @@ Se estiver utilizando Pycharm Community
   11. Inicializar o banco de dados carregando os dados padrão :
       ```
         
-      initialize_myproject_db development.ini
+      initialize_nomedoprojeto_db development.ini
       
       ```
   12. Executar o projeto
@@ -117,4 +121,15 @@ Se estiver utilizando Pycharm Community
       pserve development.ini
       
       ```
+      O projeto sera executado por padrão na porta 6543, definida no arquivo development.ini junto com o servidor Waitress utilizado.
+
+##Considerações Finais
+- A comunidade é pouco engajada, com poucas atualizações relevantes nos últimos anos.
+- Embora a documentação seja boa, ainda é difícil encontrar materiais específicos quando necessário. Existem poucos tutoriais produzidos pela comunidade para resolver questões mais avançadas.
+- Para projetos com necessidades semelhantes, Django e Flask se destacam como opções mais robustas, com melhor suporte e uma comunidade mais ativa.
+
+## Docs
+[Pyramid documentation](https://docs.pylonsproject.org/projects/pyramid/en/latest/index.html)
+
+[Pyramid Site](https://trypyramid.com/)
       
