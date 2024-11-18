@@ -3,3 +3,6 @@ def includeme(config):
     config.add_route('home', '/')
     config.add_route('user_list', '/user_list')
     config.add_route('create_user', '/create_user')
+    config.add_route('delete_user', '/delete_user/{id}', request_method='GET')
+
+

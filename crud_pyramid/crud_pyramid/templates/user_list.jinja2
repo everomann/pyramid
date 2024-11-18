@@ -22,6 +22,7 @@
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Telefone</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,6 +32,11 @@
                             <td>{{ user.name }}</td>
                             <td>{{ user.email }}</td>
                             <td>{{ user.phone }}</td>
+                            <td>
+                                <a href="{{ request.route_url('delete_user', id=user.id) }}" onclick="return confirm('Tem certeza que deseja excluir este usuário?');">
+                                    <button type="button" class="btn btn-delete">Excluir</button>
+                                </a>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
