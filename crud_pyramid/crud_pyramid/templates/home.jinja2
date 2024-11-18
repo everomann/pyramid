@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pyramid</title>
+        <link rel="stylesheet" type="text/css" href="{{ request.static_url('crud_pyramid:static/style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+
+            <h1><img src="static/pyramid-16x16.png" alt="image" style="width:22px; margin-right:5px";/>Pyramid</h1>
+            <a href="{{ request.route_url('create_user') }}">
+                    <button type="button" class="btn">Cadastrar Usuário</button>
+            </a>
+            <a href="{{ request.route_url('user_list') }}">
+                    <button type="button" class="btn">Listar Usuários</button>
+            </a>
+
+        </div>
+    </body>
+</html>

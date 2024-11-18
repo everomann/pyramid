@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pyramid - Lista de Usuários</title>
+        <link rel="stylesheet" type="text/css" href="{{ request.static_url('crud_pyramid:static/style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lista de Usuários</h1>
+
+            {% if error_message %}
+                <div class="alert alert-danger">
+                    {{ error_message }}
+                </div>
+            {% endif %}
+
+            {% if users %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.phone }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>Não há usuários cadastrados.</p>
+            {% endif %}
+
+            <a href="{{ request.route_url('create_user') }}">
+                <button type="button" class="btn">Novo Usuário</button>
+            </a>
+
+            <a href="{{ request.route_url('home') }}">
+                <button type="button" class="btn">Voltar</button>
+            </a>
+        </div>
+    </body>
+</html>

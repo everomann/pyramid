@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pyramid</title>
+        <link rel="stylesheet" type="text/css" href="{{ request.static_url('crud_pyramid:static/style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Cadastrar Usuário</h1>
+
+            <!-- Formulário de Cadastro -->
+            <form method="POST" action="">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" value="{{ name }}" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" value="{{ email }}" required>
+
+                <label for="phone">Telefone:</label>
+                <input type="text" id="phone" name="phone" value="{{ phone }}" required>
+
+                <button type="submit" class="btn">Cadastrar</button>
+
+                <a href="{{ request.route_url('user_list') }}">
+                    <button type="button" class="btn">Listar Usuários</button>
+                </a>
+
+            </form>
+
+            <!-- Exibir mensagem de sucesso ou erro -->
+            {% if success_message %}
+                <div class="alert alert-success">
+                    {{ success_message }}
+                </div>
+            {% elif error_message %}
+                <div class="alert alert-danger">
+                    {{ error_message }}
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
